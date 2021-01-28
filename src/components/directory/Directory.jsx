@@ -3,6 +3,7 @@ import "./Directory.scss"
 import MenuItem from "../menu-item/MenuItem"
 
 function Directory() {
+  // eslint-disable-next-line no-unused-vars
   const [sections, setSections] = useState([
     {
       title: "hats",
@@ -41,8 +42,8 @@ function Directory() {
   return (
     <div>
       <div className="directory-menu">
-        {sections.map(({ title, imageUrl, id, size }) => (
-          <MenuItem title={title} imageUrl={imageUrl} id={id} size={size} />
+        {sections.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
         ))}
       </div>
     </div>
