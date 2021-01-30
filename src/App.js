@@ -4,6 +4,7 @@ import "./App.scss"
 import Homepage from "./pages/homepage/Homepage"
 import ShopPage from "./pages/shop/ShopPage"
 import Header from "./components/header/Header"
+import SignInSignUp from "./pages/sign-in-and-sign-up/SignInSignUp"
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         </Route>
         <Route path="/shop">
           <ShopPage />
+        </Route>
+        <Route path="/signin">
+          <SignInSignUp />
         </Route>
       </Switch>
     </div>
